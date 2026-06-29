@@ -1,0 +1,17 @@
+name,batch_size,optimizer,lr,hidden1,hidden2,activation,dropout,weight_decay,batchnorm,augment,best_val_acc,test_acc,test_loss,time_sec
+batchnorm,32,adam,0.001,512,,relu,0.0,0.0,True,False,0.9077,0.9104,0.2551,73.4
+adam_lr_1e-4,32,adam,0.0001,512,,relu,0.0,0.0,False,False,0.8928,0.9005,0.3013,74.3
+batch_64,64,adam,0.001,512,,relu,0.0,0.0,False,False,0.8853,0.8955,0.3981,60.3
+activation_gelu,32,adam,0.001,512,,gelu,0.0,0.0,False,False,0.8728,0.8806,0.4593,72.4
+adamw_lr_1e-3,32,adamw,0.001,512,,relu,0.0,0.0,False,False,0.8678,0.8781,0.4906,78.8
+sgd_lr_1e-2,32,sgd,0.01,512,,relu,0.0,0.0,False,False,0.8753,0.8756,0.4171,58.2
+batch_16,16,adam,0.001,512,,relu,0.0,0.0,False,False,0.8803,0.8682,0.5222,125.2
+two_hidden_512_256,32,adam,0.001,512,256.0,relu,0.0,0.0,False,False,0.8778,0.8607,0.4307,74.6
+baseline_1_hidden,32,adam,0.001,512,,relu,0.0,0.0,False,False,0.8753,0.8582,0.443,126.3
+dropout_0_3,32,adam,0.001,512,,relu,0.3,0.0,False,False,0.8579,0.8532,0.4484,69.4
+activation_tanh,32,adam,0.001,512,,tanh,0.0,0.0,False,False,0.8603,0.8483,0.4365,75.8
+activation_leaky_relu,32,adam,0.001,512,,leaky_relu,0.0,0.0,False,False,0.8728,0.8483,0.4896,76.5
+weight_decay_1e-4,32,adam,0.001,512,,relu,0.0,0.0001,False,False,0.8678,0.8383,0.4923,72.1
+rmsprop_lr_1e-3,32,rmsprop,0.001,512,,relu,0.0,0.0,False,False,0.7855,0.7985,13.697,66.6
+dropout_weight_decay_aug,32,adam,0.001,512,,relu,0.3,0.0001,False,True,0.8005,0.7612,1.1068,91.3
+two_hidden_reg_aug,32,adam,0.001,512,256.0,relu,0.3,0.0001,False,True,0.7082,0.7313,0.7602,98.7
