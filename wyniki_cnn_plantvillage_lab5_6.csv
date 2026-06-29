@@ -1,0 +1,2 @@
+model,classes,image_size,max_images_per_class,batch_size,epochs,augmentation,optimizer,learning_rate,test_accuracy
+LeafCNN,5,64,600,32,10,True,AdamW,0.001,0.9303482587064676
